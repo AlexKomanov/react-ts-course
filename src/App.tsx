@@ -1,12 +1,11 @@
 import './App.css'
+import ListGroup from "./components/ListGroup.tsx";
 
 function App() {
 
     return (
         <>
-            <h1>
-                Hello Rect and Vite
-            </h1>
+    <ListGroup />
 
         </>
     )
