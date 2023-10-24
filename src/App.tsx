@@ -1,5 +1,6 @@
 import './App.css'
 import ListGroup from "./components/ListGroup.tsx";
+import Alert from "./components/Alert.tsx";
 
 function App() {
 
@@ -11,6 +12,9 @@ function App() {
 
     return (
         <>
+            <Alert >
+                Hello <strong>World</strong>
+            </Alert>
             <ListGroup items={items} heading="List" onSelectItem={handleSelectItem}/>
 
         </>
