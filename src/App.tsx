@@ -2,6 +2,7 @@ import './App.css'
 import ListGroup from "./components/ListGroup.tsx";
 import Alert from "./components/Alert.tsx";
 import ButtonComponent from "./components/ButtonComponent.tsx";
+import {useState} from "react";
 
 function App() {
 
@@ -11,16 +12,20 @@ function App() {
         console.log('item', item);
     }
 
+    const [showAlert, setShowAlert] = useState(false)
+
     return (
         <>
-            <Alert>
-                Hello <strong>World</strong>
-            </Alert>
-            <ButtonComponent onHandleClick={() => console.log("Clicked!")}>
-                Click Me Primary
+            {
+                showAlert && <Alert onClose={() => setShowAlert(false)}>
+                    Hello <strong>World</strong>
+                </Alert>
+            }
+            <ButtonComponent onHandleClick={() => setShowAlert(true)}>
+                Open Alert
             </ButtonComponent>
-            <ButtonComponent type="success" onHandleClick={() => console.log("Clicked!")}>
-                Click Me
+            <ButtonComponent type="success" onHandleClick={() => setShowAlert(false)}>
+                Close Alert
             </ButtonComponent>
             <ListGroup items={items} heading="List" onSelectItem={handleSelectItem}/>
 
