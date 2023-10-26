@@ -4,6 +4,7 @@ import Alert from "./components/Alert.tsx";
 import ButtonComponent from "./components/ButtonComponent.tsx";
 import {useState} from "react";
 import { BsFillCalendarFill } from 'react-icons/bs'
+import Like from "./components/Like.tsx";
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
             <ListGroup items={items} heading="List" onSelectItem={handleSelectItem}/>
             <BsFillCalendarFill />
             <BsFillCalendarFill color="red" size="40"/>
+            <div style={{margin: 20}}>
+                <Like onClick={() => console.log("Clicked the button")}/>
+            </div>
         </>
     )
 }
