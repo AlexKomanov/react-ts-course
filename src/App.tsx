@@ -3,6 +3,7 @@ import ListGroup from "./components/ListGroup.tsx";
 import Alert from "./components/Alert.tsx";
 import ButtonComponent from "./components/ButtonComponent.tsx";
 import {useState} from "react";
+import { BsFillCalendarFill } from 'react-icons/bs'
 
 function App() {
 
@@ -28,7 +29,8 @@ function App() {
                 Close Alert
             </ButtonComponent>
             <ListGroup items={items} heading="List" onSelectItem={handleSelectItem}/>
-
+            <BsFillCalendarFill />
+            <BsFillCalendarFill color="red" size="40"/>
         </>
     )
 }
