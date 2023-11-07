@@ -2,7 +2,9 @@ import './App.css'
 import ExpenseList from "./expense-tracker/components/ExpenseList.tsx";
 import {useState} from "react";
 import ExpenseFilter from "./expense-tracker/components/ExpenseFilter.tsx";
+import ExpenseForm from "./expense-tracker/components/ExpenseForm.tsx";
 
+export const categories = ["Groceries", "Utilities", "Entertainment"];
 
 function App() {
 
@@ -20,6 +22,9 @@ function App() {
 
     return (
         <>
+            <div className="mb-5">
+                <ExpenseForm />
+            </div>
             {/*<Form/>*/}
             <div className={"mb-3"}>
                 <ExpenseFilter onSelectCategory={category => setSelectedCategory(category)}/>
